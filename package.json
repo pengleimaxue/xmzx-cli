@@ -1,11 +1,11 @@
 {
-  "name": "pandly-cli",
+  "name": "@pengleip/xmzx-cli",
   "version": "1.0.0",
   "description": "A pro CLI for scaffolding Vue.js projects",
   "preferGlobal": true,
   "bin": {
-    "pandly": "bin/pandly",
-    "pandly-create": "bin/pandly-create"
+    "xmzx": "bin/xmzx",
+    "xmzx-create": "bin/xmzx-create"
   },
   "script": {
     "postpublish": "git push",
@@ -16,7 +16,7 @@
     "cli",
     "spa"
   ],
-  "author": "Pandly Shen",
+  "author": "peng",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.0.0",

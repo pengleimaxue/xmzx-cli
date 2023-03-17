@@ -1,9 +1,8 @@
-# Pandly CLI
-
+# xmzx CLI
 > A pro CLI for scaffolding Vue.js projects
 
 # Usage
 
-`npm install pandly-cli -g`
+`npm install @pengleip/xmzx-cli -g`
 
-`pandly create xxx`
+`xmzx create xxx`

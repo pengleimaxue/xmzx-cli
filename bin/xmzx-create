@@ -27,7 +27,7 @@ const projectName = inPlace ? path.relative('../', process.cwd()) : rawName
 // 创建项目目录的绝对路径
 const projectPath = path.resolve(projectName || '.')
 // 远程模板下载到本地的路径
-const downloadPath = path.join(home, '.vue-pro-template')
+const downloadPath = path.join(home, '.vue2-template')
 
 const spinner = ora()
 
@@ -57,15 +57,16 @@ function run() {
   ask().then(answers => {
     if (exists(downloadPath)) rm(downloadPath)
     checkVersion(() => {
-      // 模板的 github 地址为 https://github.com/pandly/vue-pro-template
-      const officalTemplate = 'pandly/vue-pro-template'
+      // 模板的 github 地址为 https://github.com/pengleimaxue/vue2-template
+       //const officalTemplate = 'direct:https://github.com/pengleimaxue/vue2-template#master'
+      const officalTemplate = 'github:pengleimaxue/vue2-template'
       downloadAndGenerate(officalTemplate, answers)
     })
   })
 }
 
 function downloadAndGenerate (officialTemplate, answers) {
-  spinner.start('Downloading template ...')
+  spinner.start(`Downloading template from ${officialTemplate} ...`)
   download(officialTemplate, downloadPath, { clone: false }, err => {
     if (err) {
       spinner.fail('Failed to download repo ' + officialTemplate + ': ' + err.message.trim())
